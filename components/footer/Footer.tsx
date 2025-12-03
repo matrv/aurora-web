@@ -63,7 +63,7 @@ export default function Footer({ introRef }: { introRef: RefObject<any> }) {
 
           <a
             className={"flex flex-row gap-1"}
-            href={"https://github.com/NiHaiden/aurora-web"}
+            href={"https://github.com/get-aurora-dev/aurora-web"}
           >
             <GitMerge />
             Website Source Code

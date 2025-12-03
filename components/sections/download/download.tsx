@@ -168,7 +168,7 @@ export default function DownloadAurora({
                       <span className="font-semibold text-white">Slow download?</span> Check out our friends at{" "}
                       <a
                         className="inline-flex items-center gap-1 font-semibold text-aurora-lightorange underline underline-offset-2 transition-colors hover:text-aurora-orangina"
-                        href="https://fosstorrents.com"
+                        href="https://fosstorrents.com/distributions/aurora/"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -210,8 +210,8 @@ function DownloadButtons({
   isHelium: boolean;
   isx86?: boolean;
 }) {
-  const downloadLink: string = `https://dl.getaurora.dev/${imageName}-x86_64.iso`;
-  const checksumLink: string = `https://dl.getaurora.dev/${imageName}-x86_64.iso-CHECKSUM`;
+  const downloadLink: string = `https://dl.getaurora.dev/${imageName}-webui-x86_64.iso`; 
+  const checksumLink: string = `https://dl.getaurora.dev/${imageName}-webui-x86_64.iso-CHECKSUM`;
   const t = useTranslations("Download-Component");
 
   return (
