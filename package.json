@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.18",
+    "@headlessui/react": "^2.2.9",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-collapsible": "^1.0.3",
     "@radix-ui/react-select": "^2.0.0",
@@ -24,12 +24,12 @@
     "lucide-react": "^0.507.0",
     "mathjs": "^14.8.1",
     "motion": "^12.23.12",
-    "next": "^15.5.8",
+    "next": "^15.5.9",
     "next-intl": "^3.26.3",
     "prettier": "^3.3.0",
     "prettier-plugin-tailwindcss": "^0.6.1",
-    "react": "^19.0.1",
-    "react-dom": "^19.0.1",
+    "react": "^19",
+    "react-dom": "^19",
     "react-scroll-motion": "^0.3.5",
     "swr": "^2.3.3",
     "tailwind-merge": "^2.2.2",
@@ -43,12 +43,11 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
-    "eslint": "^8",
-    "eslint-config-next": "15.3.2",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.9",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
     "tailwindcss-animated": "^1.0.1",
     "typescript": "^5"
-  },
-  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
+  }
 }
