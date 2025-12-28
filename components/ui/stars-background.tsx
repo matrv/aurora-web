@@ -23,6 +23,7 @@ interface StarBackgroundProps {
   minTwinkleSpeed?: number;
   maxTwinkleSpeed?: number;
   className?: string;
+  static?: boolean;
 }
 
 export const StarsBackground: React.FC<StarBackgroundProps> = ({
@@ -32,6 +33,7 @@ export const StarsBackground: React.FC<StarBackgroundProps> = ({
   minTwinkleSpeed = 0.5,
   maxTwinkleSpeed = 1,
   className,
+  static: isStatic = false,
 }) => {
   const [stars, setStars] = useState<StarProps[]>([]);
   const canvasRef: RefObject<HTMLCanvasElement> =
@@ -117,22 +119,26 @@ export const StarsBackground: React.FC<StarBackgroundProps> = ({
         ctx.fillStyle = `rgba(255, 255, 255, ${star.opacity})`;
         ctx.fill();
 
-        if (star.twinkleSpeed !== null) {
+        if (!isStatic && star.twinkleSpeed !== null) {
           star.opacity =
             0.5 +
             Math.abs(Math.sin((Date.now() * 0.001) / star.twinkleSpeed) * 0.5);
         }
       });
 
-      animationFrameId = requestAnimationFrame(render);
+      if (!isStatic) {
+        animationFrameId = requestAnimationFrame(render);
+      }
     };
 
     render();
 
     return () => {
-      cancelAnimationFrame(animationFrameId);
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
     };
-  }, [stars]);
+  }, [stars, isStatic]);
 
   return (
     <canvas

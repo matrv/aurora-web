@@ -112,7 +112,7 @@ export default function ContributorsPage() {
 
   return (
     <div className="relative min-h-screen bg-gray-950 text-white">
-      <StarsBackground starDensity={0.0003} />
+      <StarsBackground starDensity={0.0003} static />
       <SharedNavbar variant="page" />
 
       <main className="relative z-10 mx-auto max-w-screen-xl px-6 pb-16 pt-32">

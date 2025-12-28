@@ -1,0 +1,112 @@
+{
+  "artists": {
+    "chandeleer": {
+      "username": "chandeleer1698",
+      "displayName": "Chandeleer",
+      "sponsorLink": "https://ko-fi.com/chandeleer"
+    },
+    "delphicmelody": {
+      "username": "delphicmelody",
+      "displayName": "Delphic Melody",
+      "sponsorLink": "https://ko-fi.com/melodyofdelphi"
+    }
+  },
+  "artworks": [
+    {
+      "id": "char-echo",
+      "title": "Echo",
+      "pronouns": "They/Them",
+      "category": "characters",
+      "image": "/art/characters/echo.png",
+      "profilePicture": "/art/profile_pictures/echo.png",
+      "artist": "chandeleer"
+    },
+    {
+      "id": "char-lumina",
+      "title": "Lumina",
+      "pronouns": "She/Her",
+      "category": "characters",
+      "image": "/art/characters/lumina.png",
+      "profilePicture": "/art/profile_pictures/lumina.png",
+      "artist": "chandeleer"
+    },
+    {
+      "id": "char-philip",
+      "title": "Philip",
+      "pronouns": "He/Him",
+      "category": "characters",
+      "image": "/art/characters/philip.png",
+      "profilePicture": "/art/profile_pictures/philip.png",
+      "artist": "chandeleer"
+    },
+    {
+      "id": "char-scope",
+      "title": "Scope",
+      "pronouns": "He/Him",
+      "category": "characters",
+      "image": "/art/characters/scope.webp",
+      "profilePicture": "/art/profile_pictures/scope.png",
+      "artist": "chandeleer"
+    },
+    {
+      "id": "char-tina",
+      "title": "Tina",
+      "pronouns": "She/Her",
+      "category": "characters",
+      "image": "/art/characters/tina.png",
+      "profilePicture": "/art/profile_pictures/tina.png",
+      "artist": "chandeleer"
+    },
+    {
+      "id": "char-vincent",
+      "title": "Vincent",
+      "pronouns": "He/Him",
+      "category": "characters",
+      "image": "/art/characters/vincent.png",
+      "profilePicture": "/art/profile_pictures/vincent.webp",
+      "artist": "chandeleer"
+    },
+    {
+      "id": "wallpaper-2",
+      "title": "Luna",
+      "category": "wallpapers",
+      "image": "/art/wallpapers/wallpaper-2.png",
+      "artist": "chandeleer"
+    },
+    {
+      "id": "wallpaper-3",
+      "title": "Voyage",
+      "category": "wallpapers",
+      "image": "/art/wallpapers/wallpaper-3.png",
+      "artist": "chandeleer"
+    },
+    {
+      "id": "wallpaper-4",
+      "title": "AuroraVerse",
+      "category": "wallpapers",
+      "image": "/art/wallpapers/wallpaper-4.png",
+      "artist": "chandeleer"
+    },
+    {
+      "id": "wallpaper-5",
+      "title": "Globetrotter",
+      "category": "wallpapers",
+      "image": "/art/wallpapers/wallpaper-5.png",
+      "artist": "chandeleer"
+    },
+    {
+      "id": "wallpaper-6",
+      "title": "FallBlues",
+      "category": "wallpapers",
+      "image": "/art/wallpapers/wallpaper-6.png",
+      "artist": "chandeleer"
+    },
+    {
+      "id": "wallpaper-7",
+      "title": "Holiday Blues",
+      "category": "wallpapers",
+      "image": "/art/wallpapers/wallpaper-7.png",
+      "artist": "chandeleer"
+    }
+  ]
+}

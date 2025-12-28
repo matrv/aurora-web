@@ -5,6 +5,7 @@
     "faq": "FAQ",
     "news": "Neuigkeiten",
     "contributors": "Mitwirkende",
+    "art": "Kunstgalerie",
     "download": "Herunterladen"
   },
   "Download-Component": {
@@ -253,6 +254,35 @@
     "join-subtitle": "Wir freuen uns über Beiträge aller Art - Code, Dokumentation, Übersetzungen und mehr!",
     "contribute-github": "Auf GitHub beitragen",
     "join-discord": "Unserem Discord beitreten",
-    "footer-note": "Danke an alle unsere Mitwirkenden, die Aurora möglich machen."
+    "footer-note": "Danke an alle unsere Mitwirkenden, die Aurora möglich machen.",
+    "roles": {
+      "maintainer": "Maintainer",
+      "artist": "Künstler",
+      "emeritus": "Ehemaliger Maintainer",
+      "special-guest": "Ehrengast",
+      "advisor": "Berater & Mentor",
+      "ublue": "Universal Blue",
+      "contributor": "Mitwirkender",
+      "designer": "Designer",
+      "translator": "Übersetzer"
+    }
+  },
+  "Art-Page": {
+    "title": "Aurora Kunstgalerie",
+    "subtitle": "Entdecke die wunderschönen Kunstwerke, die von unseren talentierten Künstlern für das Aurora-Projekt erstellt wurden.",
+    "by-artist": "von",
+    "sponsor-artist": "Diesen Künstler unterstützen",
+    "close": "Schließen",
+    "zoom-in": "Vergrößern",
+    "zoom-out": "Verkleinern",
+    "reset-zoom": "Zoom zurücksetzen",
+    "download": "Herunterladen",
+    "download-character": "Charakter",
+    "download-profile": "Profilbild",
+    "all": "Alle",
+    "categories": {
+      "characters": "Charaktere",
+      "wallpapers": "Hintergrundbilder"
+    }
   }
 }

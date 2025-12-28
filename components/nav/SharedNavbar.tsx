@@ -47,47 +47,78 @@ const SharedNavbar = ({ variant = "page", onScrollTo }: SharedNavbarProps) => {
       >
         {/* Desktop navbar */}
         <div className="mb-4 hidden w-full flex-row items-center justify-between gap-4 font-medium text-white md:mb-0 lg:flex">
-          {/* Logo */}
-          {isHomePage && variant === "home" ? (
-            <div
-              className="ml-2 cursor-pointer"
-              onClick={() => handleNavClick("intro")}
-            >
-              <img src="/aurora-logo-white.svg" width={45} height={45} alt="Aurora" />
-            </div>
-          ) : (
-            <Link href="/" className="ml-2">
-              <img src="/aurora-logo-white.svg" width={45} height={45} alt="Aurora" />
-            </Link>
-          )}
-
-          {/* Nav links */}
-          <div className="flex flex-row items-center justify-center gap-14 text-lg">
+          {/* Left side - Logo and Nav links */}
+          <div className="flex flex-row items-center gap-10">
+            {/* Logo */}
             {isHomePage && variant === "home" ? (
-              <>
-                <button onClick={() => handleNavClick("intro")}>
-                  {t("end-user")}
-                </button>
-                <button onClick={() => handleNavClick("news")}>
-                  {t("news")}
-                </button>
-              </>
+              <div
+                className="ml-2 cursor-pointer"
+                onClick={() => handleNavClick("intro")}
+              >
+                <img
+                  src="/aurora-logo-white.svg"
+                  width={45}
+                  height={45}
+                  alt="Aurora"
+                />
+              </div>
             ) : (
-              <>
-                <Link href="/" className="hover:text-aurora-blue transition-colors">
-                  {t("end-user")}
-                </Link>
-                <Link href="/" className="hover:text-aurora-blue transition-colors">
-                  {t("news")}
-                </Link>
-              </>
+              <Link href="/" className="ml-2">
+                <img
+                  src="/aurora-logo-white.svg"
+                  width={45}
+                  height={45}
+                  alt="Aurora"
+                />
+              </Link>
             )}
-            <Link
-              href="/contributors"
-              className={`transition-colors ${pathname === "/contributors" ? "text-aurora-blue" : "hover:text-aurora-blue"}`}
-            >
-              {t("contributors")}
-            </Link>
+
+            {/* Nav links */}
+            <div className="flex flex-row items-center gap-8 text-lg">
+              {isHomePage && variant === "home" ? (
+                <>
+                  <button
+                    onClick={() => handleNavClick("intro")}
+                    className="transition-colors hover:text-aurora-blue"
+                  >
+                    {t("end-user")}
+                  </button>
+                  <button
+                    onClick={() => handleNavClick("news")}
+                    className="transition-colors hover:text-aurora-blue"
+                  >
+                    {t("news")}
+                  </button>
+                </>
+              ) : (
+                <>
+                  <Link
+                    href="/"
+                    className="transition-colors hover:text-aurora-blue"
+                  >
+                    {t("end-user")}
+                  </Link>
+                  <Link
+                    href="/"
+                    className="transition-colors hover:text-aurora-blue"
+                  >
+                    {t("news")}
+                  </Link>
+                </>
+              )}
+              <Link
+                href="/contributors"
+                className={`transition-colors ${pathname === "/contributors" ? "text-aurora-blue" : "hover:text-aurora-blue"}`}
+              >
+                {t("contributors")}
+              </Link>
+              <Link
+                href="/art"
+                className={`transition-colors ${pathname === "/art" ? "text-aurora-blue" : "hover:text-aurora-blue"}`}
+              >
+                {t("art")}
+              </Link>
+            </div>
           </div>
 
           {/* Right side */}
@@ -108,7 +139,10 @@ const SharedNavbar = ({ variant = "page", onScrollTo }: SharedNavbarProps) => {
         {/* Mobile navbar */}
         <div className="flex w-full flex-row items-center justify-between lg:hidden">
           {isHomePage && variant === "home" ? (
-            <div className="cursor-pointer" onClick={() => handleNavClick("intro")}>
+            <div
+              className="cursor-pointer"
+              onClick={() => handleNavClick("intro")}
+            >
               <img
                 src="/aurora-logo-white.svg"
                 width={45}
@@ -204,9 +238,20 @@ const SharedNavbar = ({ variant = "page", onScrollTo }: SharedNavbarProps) => {
               <Link
                 href="/contributors"
                 onClick={closeNavbar}
-                className={pathname === "/contributors" ? "text-aurora-blue" : ""}
+                className={
+                  pathname === "/contributors" ? "text-aurora-blue" : ""
+                }
               >
                 {t("contributors")}
+              </Link>
+              <Link
+                href="/art"
+                onClick={closeNavbar}
+                className={
+                  pathname === "/art" ? "text-aurora-blue" : ""
+                }
+              >
+                {t("art")}
               </Link>
             </div>
           </div>
