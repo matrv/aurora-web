@@ -36,3 +36,5 @@ next-env.d.ts
 
 # bun
 bun.lockb
+
+data/contributors-cache.json
