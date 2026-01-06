@@ -5,7 +5,6 @@
   "scripts": {
     "dev": "next dev",
     "build": "node scripts/cache-contributors.mjs --force && next build",
-    "prebuild": "node scripts/cache-contributors.mjs",
     "cache-contributors": "node scripts/cache-contributors.mjs",
     "start": "next start",
     "lint": "next lint"
