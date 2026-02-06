@@ -113,7 +113,7 @@ export default function AboutDocs() {
 
             <div className={"flex w-full flex-col gap-4 lg:flex-row"}>
               <a
-                href={"https://universal-blue.discourse.group"}
+                href={"https://github.com/ublue-os/aurora/discussions"}
                 target={"_blank"}
                 rel={"noreferrer"}
                 className={
