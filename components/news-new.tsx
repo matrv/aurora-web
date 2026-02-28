@@ -81,7 +81,7 @@ function NewsFromBlogInnerComponent({
         {recentPosts.length > 0 ? (
           recentPosts.map((post, index) => {
             const publishedDate = post.published
-              ? new Date(post.published).toLocaleDateString(locale === "de" ? "de-DE" : "en-US", {
+              ? new Date(post.published).toLocaleDateString(locale, {
                 year: "numeric",
                 month: "short",
                 day: "numeric",
