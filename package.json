@@ -26,13 +26,11 @@
     "highlight.js": "^11.10.0",
     "lodash": "^4.17.21",
     "lucide-react": "^0.507.0",
-    "mathjs": "^14.8.1",
     "motion": "^12.23.12",
     "next": "^16.0.10",
     "next-intl": "^4.6.1",
     "react": "^19",
     "react-dom": "^19",
-    "react-scroll-motion": "^0.3.5",
     "swr": "^2.3.3",
     "tailwind-merge": "^2.2.2",
     "tailwindcss-animate": "^1.0.7"
