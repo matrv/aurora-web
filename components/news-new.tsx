@@ -73,10 +73,10 @@ export default function NewsFromBlog({
           recentPosts.map((post, index) => {
             const publishedDate = post.published
               ? new Date(post.published).toLocaleDateString(locale === "de" ? "de-DE" : "en-US", {
-                  year: "numeric",
-                  month: "short",
-                  day: "numeric",
-                })
+                year: "numeric",
+                month: "short",
+                day: "numeric",
+              })
               : "No date";
 
             return (

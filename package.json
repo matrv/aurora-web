@@ -22,7 +22,6 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "embla-carousel-react": "^8.6.0",
-    "lodash": "^4.17.21",
     "lucide-react": "^0.507.0",
     "motion": "^12.23.12",
     "next": "^16.0.10",
@@ -35,7 +34,6 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "@types/lodash": "^4.17.16",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
