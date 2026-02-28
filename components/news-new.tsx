@@ -1,9 +1,19 @@
 "use client";
 import { useTranslations, useLocale } from "next-intl";
-import React from "react";
-import useSWR from "swr";
+import React, { Suspense, use } from "react";
 import { parseFeed } from "@rowanmanning/feed-parser";
 import { ArrowRight, Calendar, ExternalLink } from "lucide-react";
+import { ErrorBoundary } from "react-error-boundary";
+
+async function getRecentBlogPosts() {
+  const res = await fetch("https://docs.getaurora.dev/blog/rss.xml");
+  if (!res.ok) throw new Error("Failed to fetch");
+  const text = await res.text();
+  const feed = parseFeed(text);
+  const recentPosts = feed.items?.slice(0, 5) || [];
+  return recentPosts;
+}
+
 
 export default function NewsFromBlog({
   newsRef,
@@ -11,48 +21,47 @@ export default function NewsFromBlog({
   newsRef: React.RefObject<HTMLDivElement>;
 }) {
   const t = useTranslations("News");
+  const recentPostsPromise = getRecentBlogPosts();
+  return <ErrorBoundary fallback={
+    <div className={"flex w-full flex-col items-center justify-center gap-8"}>
+      <h1
+        className={
+          "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-4xl font-bold text-transparent lg:text-7xl"
+        }
+      >
+        {t("title")}
+      </h1>
+      <div className={"text-red-400"}>{t("failed-to-load")}</div>
+    </div>
+  }>
+    <Suspense fallback={<div className={"flex w-full flex-col items-center justify-center gap-8"}>
+      <h1
+        className={
+          "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-4xl font-bold text-transparent lg:text-7xl"
+        }
+      >
+        {t("latest-from-blog")}
+      </h1>
+      <div className={"animate-pulse text-gray-400"}>
+        {t("loading")}
+      </div>
+    </div>}>
+      <NewsFromBlogInnerComponent newsRef={newsRef} recentPostsPromise={recentPostsPromise} />
+    </Suspense>
+  </ErrorBoundary>
+
+}
+
+function NewsFromBlogInnerComponent({
+  newsRef,
+  recentPostsPromise
+}: {
+  newsRef: React.RefObject<HTMLDivElement>;
+  recentPostsPromise: ReturnType<typeof getRecentBlogPosts>;
+}) {
+  const t = useTranslations("News");
+  const recentPosts = use(recentPostsPromise);
   const locale = useLocale();
-  const news = useSWR("blogposts", async () => {
-    const res = await fetch("https://docs.getaurora.dev/blog/rss.xml");
-    if (!res.ok) throw new Error("Failed to fetch");
-    return res.text();
-  });
-
-  if (news.error) {
-    return (
-      <div className={"flex w-full flex-col items-center justify-center gap-8"}>
-        <h1
-          className={
-            "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-4xl font-bold text-transparent lg:text-7xl"
-          }
-        >
-          {t("title")}
-        </h1>
-        <div className={"text-red-400"}>{t("failed-to-load")}</div>
-      </div>
-    );
-  }
-
-  if (!news.data) {
-    return (
-      <div className={"flex w-full flex-col items-center justify-center gap-8"}>
-        <h1
-          className={
-            "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-4xl font-bold text-transparent lg:text-7xl"
-          }
-        >
-          {t("latest-from-blog")}
-        </h1>
-        <div className={"animate-pulse text-gray-400"}>
-          {t("loading")}
-        </div>
-      </div>
-    );
-  }
-
-  const feed = parseFeed(news.data);
-  const recentPosts = feed.items?.slice(0, 5) || [];
-
   return (
     <div
       ref={newsRef}
