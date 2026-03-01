@@ -1,6 +1,6 @@
 "use client";
 import { useTranslations, useLocale } from "next-intl";
-import React, { Suspense, use } from "react";
+import React, { Suspense, use, useMemo } from "react";
 import { parseFeed } from "@rowanmanning/feed-parser";
 import { ArrowRight, Calendar, ExternalLink } from "lucide-react";
 import { ErrorBoundary } from "react-error-boundary";
@@ -21,7 +21,7 @@ export default function NewsFromBlog({
   newsRef: React.RefObject<HTMLDivElement>;
 }) {
   const t = useTranslations("News");
-  const recentPostsPromise = getRecentBlogPosts();
+  const recentPostsPromise = useMemo(getRecentBlogPosts, []);
   return <ErrorBoundary fallback={
     <div className={"flex w-full flex-col items-center justify-center gap-8"}>
       <h1
