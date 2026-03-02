@@ -14,7 +14,6 @@
     "@radix-ui/react-select": "^2.0.0",
     "@rowanmanning/feed-parser": "^2.1.1",
     "@tanstack/react-hotkeys": "^0.1.0",
-    "clsx": "^2.1.0",
     "embla-carousel-react": "^8.6.0",
     "lucide-react": "^0.507.0",
     "motion": "^12.23.12",
