@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import { notFound } from "next/navigation";
 import "./globals.css";
-import { Toaster } from "@/components/ui/toaster";
 import { DiscourseScript } from "./discourse-script";
 import { NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
@@ -53,7 +52,6 @@ export default async function RootLayout({
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>
-        <Toaster />
       </body>
     </html>
   );

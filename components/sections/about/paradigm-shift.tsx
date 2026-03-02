@@ -2,17 +2,20 @@
 
 import SpotlightCard from "@/components/SpotlightCard";
 import { ArrowUpRight, Cuboid, ShoppingBag, TextSearch } from "lucide-react";
-import useIsMobile from "@/components/sections/about/useIsMobile";
 import { useTranslations } from "next-intl";
+import { cn } from "@/lib/utils";
 
-function FlathubLink({ label }: { label: string }) {
+function FlathubLink({ label, className }: { label: string, className?: string }) {
   return (
     <a
       href={"https://flathub.org"}
       target={"_blank"}
       rel={"noreferrer"}
       className={
-        "flex flex-row justify-between items-center gap-3 rounded-2xl border border-aurora-lightorange p-3 text-lg font-bold text-white hover:bg-aurora-lightorange/10 transition-colors"
+        cn(
+          "flex flex-row justify-between items-center gap-3 rounded-2xl border border-aurora-lightorange p-3 text-lg font-bold text-white hover:bg-aurora-lightorange/10 transition-colors",
+          className
+        )
       }
     >
       {label}
@@ -22,7 +25,6 @@ function FlathubLink({ label }: { label: string }) {
 }
 
 export default function ParadigmShift() {
-  const isMobile = useIsMobile();
   const t = useTranslations("Paradigm-Shift");
 
   return (
@@ -97,7 +99,7 @@ export default function ParadigmShift() {
                 >
                   {t("app-store")}
                 </h2>
-                {!isMobile && <div className="ml-4"><FlathubLink label={t("checkout-flathub")} /></div>}
+                <div className="ml-4 max-md:hidden"><FlathubLink label={t("checkout-flathub")} /></div>
               </div>
               <div className={"text-xl leading-relaxed"}>
                 <p className={"mb-4"}>
@@ -110,7 +112,7 @@ export default function ParadigmShift() {
                 >
                   {t("app-store-highlight")}
                 </p>
-                {isMobile && <FlathubLink label={t("checkout-flathub")} />}
+                <FlathubLink label={t("checkout-flathub")} className="md:hidden" />
               </div>
             </div>
           </div>
