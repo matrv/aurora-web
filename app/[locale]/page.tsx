@@ -28,7 +28,7 @@ export default function Home() {
 	return (
 		<div>
 			<SharedNavbar variant="home" onScrollTo={handleScrollTo} />
-			<main className="min-h-[100dvh]">
+			<main className="min-h-dvh">
 				<Hero introRef={introRef} aboutRef={aboutRef} />
 				<AboutAuroraNew
 					aboutRef={aboutRef}

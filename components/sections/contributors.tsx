@@ -30,12 +30,12 @@ export default function Contributors() {
 		<div>
 			<div
 				className={
-					"flex max-w-screen-2xl flex-col items-center justify-center gap-5"
+					"flex max-w-(--breakpoint-2xl) flex-col items-center justify-center gap-5"
 				}
 			>
 				<h1
 					className={
-						"bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text py-2 text-4xl font-bold text-transparent lg:text-7xl"
+						"bg-linear-to-r from-aurora-blue to-aurora-lightorange bg-clip-text py-2 text-4xl font-bold text-transparent lg:text-7xl"
 					}
 				>
 					{t("title")}
@@ -43,7 +43,7 @@ export default function Contributors() {
 				<div className={"text-xl"}>{t("subtitle")}</div>
 				<div
 					className={
-						"flex h-fit w-full max-w-screen-2xl flex-wrap justify-center gap-4"
+						"flex h-fit w-full max-w-(--breakpoint-2xl) flex-wrap justify-center gap-4"
 					}
 				>
 					{filteredContributors.length > 0 ? (
@@ -61,9 +61,9 @@ export default function Contributors() {
 						<p className="text-zinc-400">{t("error")}</p>
 					)}
 				</div>
-				<div className="mt-6 w-full max-w-screen-2xl rounded-2xl border border-zinc-700 bg-zinc-900/60 p-4 shadow-lg backdrop-blur-sm lg:p-6">
+				<div className="mt-6 w-full max-w-(--breakpoint-2xl) rounded-2xl border border-zinc-700 bg-zinc-900/60 p-4 shadow-lg backdrop-blur-xs lg:p-6">
 					<div className="mb-3 flex items-center justify-between gap-2">
-						<h2 className="bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-xl font-semibold text-transparent lg:text-2xl">
+						<h2 className="bg-linear-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-xl font-semibold text-transparent lg:text-2xl">
 							{t("repo-activity-title")}
 						</h2>
 						<a

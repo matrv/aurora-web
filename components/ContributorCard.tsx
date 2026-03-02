@@ -112,7 +112,7 @@ export function ContributorCard({
 
   return (
     <div
-      className={`group relative overflow-hidden rounded-2xl border ${roleBorderColors[contributor.role]} bg-zinc-900/50 backdrop-blur-sm transition-all duration-300 hover:border-aurora-lightorange hover:bg-zinc-900/70`}
+      className={`group relative overflow-hidden rounded-2xl border ${roleBorderColors[contributor.role]} bg-zinc-900/50 backdrop-blur-xs transition-all duration-300 hover:border-aurora-lightorange hover:bg-zinc-900/70`}
     >
       <div className="p-6">
         <div className="flex items-start gap-5">
@@ -121,7 +121,7 @@ export function ContributorCard({
             href={githubData.html_url}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-shrink-0"
+            className="shrink-0"
           >
             <img
               src={githubData.avatar_url}
@@ -143,7 +143,7 @@ export function ContributorCard({
               >
                 {githubData.name || githubData.login}
               </a>
-              <ExternalLink className="h-4 w-4 flex-shrink-0 text-zinc-500" />
+              <ExternalLink className="h-4 w-4 shrink-0 text-zinc-500" />
             </div>
 
             <span className="text-sm text-zinc-400">@{githubData.login}</span>

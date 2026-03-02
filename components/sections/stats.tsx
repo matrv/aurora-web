@@ -48,12 +48,12 @@ export default function StatsSection() {
 	return (
 		<section className="relative w-full bg-gray-950 px-6 py-20 text-white">
 			<StarsBackground starDensity={0.00035} static />
-			<div className="relative z-10 mx-auto flex w-full max-w-screen-2xl flex-col gap-10">
-				<h2 className="bg-gradient-to-r from-aurora-blue via-aurora-darkblue to-aurora-orangina bg-clip-text text-4xl font-bold text-transparent lg:text-6xl">
+			<div className="relative z-10 mx-auto flex w-full max-w-(--breakpoint-2xl) flex-col gap-10">
+				<h2 className="bg-linear-to-r from-aurora-blue via-aurora-darkblue to-aurora-orangina bg-clip-text text-4xl font-bold text-transparent lg:text-6xl">
 					{t("title")}
 				</h2>
 
-				<div className="rounded-2xl border border-white/10 bg-gray-900/70 p-4 shadow-sm backdrop-blur-sm md:p-6">
+				<div className="rounded-2xl border border-white/10 bg-gray-900/70 p-4 shadow-xs backdrop-blur-xs md:p-6">
 					<div className="mb-4 flex items-center justify-between gap-4">
 						<h3 className="text-xl font-semibold text-white md:text-2xl">
 							{t(`slides.${STAT_SLIDES[activeIndex].id}.title`)}
@@ -109,7 +109,7 @@ export default function StatsSection() {
 								);
 
 								return (
-									<div key={slide.id} className="w-full flex-shrink-0">
+									<div key={slide.id} className="w-full shrink-0">
 										<div className="mx-auto w-full">
 											{slide.href ? (
 												<a

@@ -71,9 +71,9 @@ export default function Hero({
 		>
 			<ShootingStars minDelay={3200} />
 			<StarsBackground starDensity={0.00003} />
-			<div className="z-10 flex max-w-screen-2xl flex-col items-center justify-center gap-5 lg:m-0">
+			<div className="z-10 flex max-w-(--breakpoint-2xl) flex-col items-center justify-center gap-5 lg:m-0">
 				<div className="mb-4 flex w-2/3 items-center justify-start md:w-3/4 lg:w-2/3">
-					<h1 className="bg-gradient-to-r from-aurora-blue via-aurora-darkblue to-aurora-orangina bg-clip-text text-6xl font-extrabold uppercase tracking-widest text-transparent md:text-7xl lg:text-9xl">
+					<h1 className="bg-linear-to-r from-aurora-blue via-aurora-darkblue to-aurora-orangina bg-clip-text text-6xl font-extrabold uppercase tracking-widest text-transparent md:text-7xl lg:text-9xl">
 						<img src={activeLogo} alt="Aurora Logo" />
 					</h1>
 				</div>
@@ -89,56 +89,56 @@ export default function Hero({
 					<TextLoop className="italic">
 						<span
 							className={
-								"bg-gradient-to-r from-aurora-blue via-aurora-darkblue to-aurora-orangina bg-clip-text text-transparent"
+								"bg-linear-to-r from-aurora-blue via-aurora-darkblue to-aurora-orangina bg-clip-text text-transparent"
 							}
 						>
 							{t("loop-1")}
 						</span>
 						<span
 							className={
-								"bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-transparent"
+								"bg-linear-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-transparent"
 							}
 						>
 							{t("loop-2")}
 						</span>
 						<span
 							className={
-								"bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-transparent"
+								"bg-linear-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-transparent"
 							}
 						>
 							{t("loop-3")}
 						</span>
 						<span
 							className={
-								"bg-gradient-to-r from-aurora-blue to-aurora-darkblue bg-clip-text text-transparent"
+								"bg-linear-to-r from-aurora-blue to-aurora-darkblue bg-clip-text text-transparent"
 							}
 						>
 							{t("loop-4")}
 						</span>
 						<span
 							className={
-								"bg-gradient-to-r from-aurora-blue to-aurora-darkblue bg-clip-text text-transparent"
+								"bg-linear-to-r from-aurora-blue to-aurora-darkblue bg-clip-text text-transparent"
 							}
 						>
 							{t("loop-5")}
 						</span>
 						<span
 							className={
-								"bg-gradient-to-r from-aurora-lightred to-aurora-orangina bg-clip-text text-transparent"
+								"bg-linear-to-r from-aurora-lightred to-aurora-orangina bg-clip-text text-transparent"
 							}
 						>
 							{t("loop-6")}
 						</span>
 						<span
 							className={
-								"bg-gradient-to-r from-aurora-lightred to-aurora-orangina bg-clip-text text-transparent"
+								"bg-linear-to-r from-aurora-lightred to-aurora-orangina bg-clip-text text-transparent"
 							}
 						>
 							{t("loop-7")}
 						</span>
 						<span
 							className={
-								"bg-gradient-to-r from-aurora-blue to-aurora-darkblue bg-clip-text text-transparent"
+								"bg-linear-to-r from-aurora-blue to-aurora-darkblue bg-clip-text text-transparent"
 							}
 						>
 							{t("loop-8")}
@@ -149,7 +149,7 @@ export default function Hero({
 					<div className="group relative">
 						<button
 							type="button"
-							className="relative inline-flex min-w-[250px] items-center justify-center gap-3 overflow-hidden rounded-xl px-6 py-3 text-lg font-semibold text-white shadow-lg backdrop-blur-sm transition-transform duration-300 hover:scale-105 hover:shadow-xl active:scale-95"
+							className="relative inline-flex min-w-[250px] items-center justify-center gap-3 overflow-hidden rounded-xl px-6 py-3 text-lg font-semibold text-white shadow-lg backdrop-blur-xs transition-transform duration-300 hover:scale-105 hover:shadow-xl active:scale-95"
 							onClick={() =>
 								aboutRef.current?.scrollIntoView({ behavior: "smooth" })
 							}
@@ -157,7 +157,7 @@ export default function Hero({
 							{LOGO_ROTATION.map((logo) => (
 								<div
 									key={logo}
-									className={`pointer-events-none absolute inset-0 rounded-xl bg-gradient-to-r transition-opacity duration-700 ease-out ${
+									className={`pointer-events-none absolute inset-0 rounded-xl bg-linear-to-r transition-opacity duration-700 ease-out ${
 										HERO_BUTTON_THEMES[logo].learnGradient
 									} ${activeLogo === logo ? "opacity-100" : "opacity-0"}`}
 								/>
@@ -166,20 +166,20 @@ export default function Hero({
 								<ArrowDown className="h-5 w-5 transition-transform duration-300 group-hover:translate-y-0.5" />
 								{t("learn-more")}
 							</span>
-							<div className="pointer-events-none absolute inset-0 z-20 rounded-xl bg-gradient-to-r from-white/0 via-white/10 to-white/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+							<div className="pointer-events-none absolute inset-0 z-20 rounded-xl bg-linear-to-r from-white/0 via-white/10 to-white/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 						</button>
 					</div>
 
 					<div className="group relative">
 						<button
 							type="button"
-							className="relative inline-flex min-w-[250px] items-center justify-center gap-3 overflow-hidden rounded-2xl px-6 py-3 text-lg font-semibold text-white shadow-lg backdrop-blur-sm transition-transform duration-300 hover:scale-105 hover:shadow-xl active:scale-95"
+							className="relative inline-flex min-w-[250px] items-center justify-center gap-3 overflow-hidden rounded-2xl px-6 py-3 text-lg font-semibold text-white shadow-lg backdrop-blur-xs transition-transform duration-300 hover:scale-105 hover:shadow-xl active:scale-95"
 							onClick={() => router.push("https://docs.getaurora.dev")}
 						>
 							{LOGO_ROTATION.map((logo) => (
 								<div
 									key={logo}
-									className={`pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-r transition-opacity duration-700 ease-out ${
+									className={`pointer-events-none absolute inset-0 rounded-2xl bg-linear-to-r transition-opacity duration-700 ease-out ${
 										HERO_BUTTON_THEMES[logo].docsGradient
 									} ${activeLogo === logo ? "opacity-100" : "opacity-0"}`}
 								/>
@@ -188,7 +188,7 @@ export default function Hero({
 								{t("go-to-docs")}
 								<ArrowUpRight className="h-5 w-5 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
 							</span>
-							<div className="pointer-events-none absolute inset-0 z-20 rounded-2xl bg-gradient-to-r from-white/0 via-white/10 to-white/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+							<div className="pointer-events-none absolute inset-0 z-20 rounded-2xl bg-linear-to-r from-white/0 via-white/10 to-white/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 						</button>
 					</div>
 				</div>

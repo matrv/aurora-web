@@ -31,7 +31,7 @@ export default function DownloadBtn({
             {t("get-aurora")}
           </span>
         </div>
-        <span className="absolute inset-0 bg-gradient-to-r from-aurora-blue to-aurora-lightorange opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100" />
+        <span className="absolute inset-0 bg-linear-to-r from-aurora-blue to-aurora-lightorange opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100" />
       </button>
       <style jsx>{`
         @keyframes downloadArrow {

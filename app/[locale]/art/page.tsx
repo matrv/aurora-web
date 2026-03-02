@@ -129,7 +129,7 @@ function CategoryCarousel({
 						return (
 							<div
 								key={artwork.id}
-								className={`group flex-shrink-0 cursor-pointer overflow-hidden rounded-2xl border-2 border-zinc-700 bg-zinc-900/80 shadow-xl transition-all hover:border-aurora-blue/50 hover:shadow-2xl hover:shadow-aurora-blue/20 ${
+								className={`group shrink-0 cursor-pointer overflow-hidden rounded-2xl border-2 border-zinc-700 bg-zinc-900/80 shadow-xl transition-all hover:border-aurora-blue/50 hover:shadow-2xl hover:shadow-aurora-blue/20 ${
 									isWallpaper
 										? "w-[600px] lg:w-[800px]"
 										: "w-[280px] lg:w-[320px]"
@@ -144,7 +144,7 @@ function CategoryCarousel({
 										alt={artwork.title}
 										className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
 									/>
-									<div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+									<div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 									<div className="absolute bottom-0 left-0 right-0 p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
 										<h3 className="flex items-baseline gap-2 text-lg font-semibold text-white drop-shadow-lg">
 											{artwork.title}
@@ -318,10 +318,10 @@ export default function ArtGalleryPage() {
 			<StarsBackground starDensity={0.0003} static />
 			<SharedNavbar variant="page" />
 
-			<main className="relative z-10 mx-auto max-w-screen-2xl px-6 pb-16 pt-32">
+			<main className="relative z-10 mx-auto max-w-(--breakpoint-2xl) px-6 pb-16 pt-32">
 				{/* Hero Section */}
 				<div className="mb-16 text-center">
-					<h1 className="mb-4 bg-gradient-to-r from-aurora-blue via-pink-400 to-aurora-lightorange bg-clip-text text-5xl font-bold text-transparent lg:text-7xl">
+					<h1 className="mb-4 bg-linear-to-r from-aurora-blue via-pink-400 to-aurora-lightorange bg-clip-text text-5xl font-bold text-transparent lg:text-7xl">
 						{t("title")}
 					</h1>
 					<p className="mx-auto max-w-2xl text-xl text-zinc-400">
@@ -329,7 +329,7 @@ export default function ArtGalleryPage() {
 					</p>
 				</div>
 
-				<div className="mb-16 rounded-2xl border border-pink-500/30 p-6 backdrop-blur-sm">
+				<div className="mb-16 rounded-2xl border border-pink-500/30 p-6 backdrop-blur-xs">
 					<div className="flex flex-col items-center gap-4 text-center md:flex-row md:text-left">
 						<div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-pink-500/20">
 							<Palette className="h-6 w-6 text-pink-400" />
@@ -391,7 +391,7 @@ export default function ArtGalleryPage() {
 									e.stopPropagation();
 									handleZoomIn();
 								}}
-								className="flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-800/90 text-white backdrop-blur-sm transition-colors hover:bg-zinc-700"
+								className="flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-800/90 text-white backdrop-blur-xs transition-colors hover:bg-zinc-700"
 								aria-label={t("zoom-in")}
 							>
 								<ZoomIn className="h-5 w-5" />
@@ -401,7 +401,7 @@ export default function ArtGalleryPage() {
 									e.stopPropagation();
 									handleZoomOut();
 								}}
-								className="flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-800/90 text-white backdrop-blur-sm transition-colors hover:bg-zinc-700"
+								className="flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-800/90 text-white backdrop-blur-xs transition-colors hover:bg-zinc-700"
 								aria-label={t("zoom-out")}
 							>
 								<ZoomOut className="h-5 w-5" />
@@ -411,12 +411,12 @@ export default function ArtGalleryPage() {
 									e.stopPropagation();
 									handleResetZoom();
 								}}
-								className="flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-800/90 text-white backdrop-blur-sm transition-colors hover:bg-zinc-700"
+								className="flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-800/90 text-white backdrop-blur-xs transition-colors hover:bg-zinc-700"
 								aria-label={t("reset-zoom")}
 							>
 								<RotateCcw className="h-5 w-5" />
 							</button>
-							<div className="flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-800/90 text-xs font-medium text-white backdrop-blur-sm">
+							<div className="flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-800/90 text-xs font-medium text-white backdrop-blur-xs">
 								{Math.round(zoom * 100)}%
 							</div>
 							<div className="relative">
@@ -427,7 +427,7 @@ export default function ArtGalleryPage() {
 												e.stopPropagation();
 												setShowDownloadMenu(!showDownloadMenu);
 											}}
-											className="flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-800/90 text-white backdrop-blur-sm transition-colors hover:bg-zinc-700"
+											className="flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-800/90 text-white backdrop-blur-xs transition-colors hover:bg-zinc-700"
 											aria-label={t("download")}
 										>
 											<Download className="h-4 w-4" />
@@ -435,7 +435,7 @@ export default function ArtGalleryPage() {
 										</button>
 										{showDownloadMenu && (
 											<div
-												className="absolute left-0 top-12 z-50 min-w-[160px] overflow-hidden rounded-xl border border-zinc-700 bg-zinc-800/95 shadow-xl backdrop-blur-sm"
+												className="absolute left-0 top-12 z-50 min-w-[160px] overflow-hidden rounded-xl border border-zinc-700 bg-zinc-800/95 shadow-xl backdrop-blur-xs"
 												onClick={(e) => e.stopPropagation()}
 											>
 												<a
@@ -464,7 +464,7 @@ export default function ArtGalleryPage() {
 										href={selectedArtworkImage}
 										download
 										onClick={(e) => e.stopPropagation()}
-										className="flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-800/90 text-white backdrop-blur-sm transition-colors hover:bg-zinc-700"
+										className="flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-800/90 text-white backdrop-blur-xs transition-colors hover:bg-zinc-700"
 										aria-label={t("download")}
 									>
 										<Download className="h-5 w-5" />
@@ -489,7 +489,7 @@ export default function ArtGalleryPage() {
 											e.stopPropagation();
 											showPreviousImage();
 										}}
-										className="absolute left-4 top-1/2 z-40 -translate-y-1/2 rounded-full bg-zinc-800/90 p-2 text-white backdrop-blur-sm transition-colors hover:bg-zinc-700"
+										className="absolute left-4 top-1/2 z-40 -translate-y-1/2 rounded-full bg-zinc-800/90 p-2 text-white backdrop-blur-xs transition-colors hover:bg-zinc-700"
 										aria-label="Previous image"
 									>
 										<ChevronLeft className="h-5 w-5" />
@@ -500,12 +500,12 @@ export default function ArtGalleryPage() {
 											e.stopPropagation();
 											showNextImage();
 										}}
-										className="absolute right-4 top-1/2 z-40 -translate-y-1/2 rounded-full bg-zinc-800/90 p-2 text-white backdrop-blur-sm transition-colors hover:bg-zinc-700"
+										className="absolute right-4 top-1/2 z-40 -translate-y-1/2 rounded-full bg-zinc-800/90 p-2 text-white backdrop-blur-xs transition-colors hover:bg-zinc-700"
 										aria-label="Next image"
 									>
 										<ChevronRight className="h-5 w-5" />
 									</button>
-									<div className="absolute bottom-4 left-1/2 z-40 flex -translate-x-1/2 gap-2 rounded-full bg-black/50 px-3 py-2 backdrop-blur-sm">
+									<div className="absolute bottom-4 left-1/2 z-40 flex -translate-x-1/2 gap-2 rounded-full bg-black/50 px-3 py-2 backdrop-blur-xs">
 										{selectedArtworkImages.map((image, index) => (
 											<button
 												type="button"
@@ -544,10 +544,10 @@ export default function ArtGalleryPage() {
 							initial={{ y: 100, opacity: 0 }}
 							animate={{ y: 0, opacity: 1 }}
 							exit={{ y: 100, opacity: 0 }}
-							className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/90 to-transparent p-6"
+							className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black via-black/90 to-transparent p-6"
 							onClick={(e) => e.stopPropagation()}
 						>
-							<div className="mx-auto max-w-screen-lg">
+							<div className="mx-auto max-w-(--breakpoint-lg)">
 								<h2 className="mb-4 flex items-baseline gap-3 text-2xl font-bold text-white">
 									{selectedArtwork.title}
 									{selectedArtwork.pronouns && (

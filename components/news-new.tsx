@@ -26,7 +26,7 @@ export default function NewsFromBlog({
     <div className={"flex w-full flex-col items-center justify-center gap-8"}>
       <h1
         className={
-          "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-4xl font-bold text-transparent lg:text-7xl"
+          "bg-linear-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-4xl font-bold text-transparent lg:text-7xl"
         }
       >
         {t("title")}
@@ -37,7 +37,7 @@ export default function NewsFromBlog({
     <Suspense fallback={<div className={"flex w-full flex-col items-center justify-center gap-8"}>
       <h1
         className={
-          "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-4xl font-bold text-transparent lg:text-7xl"
+          "bg-linear-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-4xl font-bold text-transparent lg:text-7xl"
         }
       >
         {t("latest-from-blog")}
@@ -70,14 +70,14 @@ function NewsFromBlogInnerComponent({
       <div className={"flex flex-row items-center justify-center gap-5"}>
         <h1
           className={
-            "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-4xl font-bold text-transparent lg:text-7xl"
+            "bg-linear-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-4xl font-bold text-transparent lg:text-7xl"
           }
         >
           {t("title")}{" "}
         </h1>
       </div>
 
-      <div className="w-full max-w-4xl overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/50 backdrop-blur-sm">
+      <div className="w-full max-w-4xl overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/50 backdrop-blur-xs">
         {recentPosts.length > 0 ? (
           recentPosts.map((post, index) => {
             const publishedDate = post.published
@@ -102,7 +102,7 @@ function NewsFromBlogInnerComponent({
                       <h3 className="flex-1 text-lg font-semibold text-white transition-colors group-hover:text-aurora-blue">
                         {post.title}
                       </h3>
-                      <ExternalLink className="mt-0.5 h-4 w-4 flex-shrink-0 text-gray-500 transition-colors group-hover:text-aurora-blue" />
+                      <ExternalLink className="mt-0.5 h-4 w-4 shrink-0 text-gray-500 transition-colors group-hover:text-aurora-blue" />
                     </div>
 
                     {post.description && (
@@ -145,7 +145,7 @@ function NewsFromBlogInnerComponent({
           href="https://docs.getaurora.dev/blog"
           target="_blank"
           rel="noopener noreferrer"
-          className="group flex items-center justify-center gap-2 rounded-xl border border-zinc-800 bg-zinc-900/30 px-6 py-3 text-sm font-medium text-gray-300 backdrop-blur-sm transition-all duration-200 hover:border-aurora-blue hover:bg-zinc-800/50 hover:text-aurora-blue"
+          className="group flex items-center justify-center gap-2 rounded-xl border border-zinc-800 bg-zinc-900/30 px-6 py-3 text-sm font-medium text-gray-300 backdrop-blur-xs transition-all duration-200 hover:border-aurora-blue hover:bg-zinc-800/50 hover:text-aurora-blue"
         >
           <span>{t("view-all")}</span>
           <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />

@@ -41,7 +41,7 @@ export default function DownloadAurora({
       <div className="w-full max-w-6xl space-y-12">
         {/* Header */}
         <div className="text-center">
-          <h1 className="bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text py-2 text-4xl font-bold text-transparent lg:text-7xl">
+          <h1 className="bg-linear-to-r from-aurora-blue to-aurora-lightorange bg-clip-text py-2 text-4xl font-bold text-transparent lg:text-7xl">
             {t("title")}
           </h1>
         </div>
@@ -55,8 +55,8 @@ export default function DownloadAurora({
             {/* Hardware Configuration Section - Full Width */}
             <div className="space-y-6">
               <div className="flex items-center gap-4">
-                <Cpu size={48} className="flex-shrink-0 text-aurora-blue" />
-                <h2 className="bg-gradient-to-r from-aurora-blue to-aurora-darkblue bg-clip-text text-3xl font-semibold text-transparent">
+                <Cpu size={48} className="shrink-0 text-aurora-blue" />
+                <h2 className="bg-linear-to-r from-aurora-blue to-aurora-darkblue bg-clip-text text-3xl font-semibold text-transparent">
                   {t("hardware-config")}
                 </h2>
               </div>
@@ -71,7 +71,7 @@ export default function DownloadAurora({
                     {t("primary-gpu")}
                   </p>
                   <Select onValueChange={setPrimaryGPU}>
-                    <SelectTrigger className="h-14 w-full border-zinc-600 bg-zinc-900/50 text-white backdrop-blur-sm transition-colors hover:bg-zinc-900/70">
+                    <SelectTrigger className="h-14 w-full border-zinc-600 bg-zinc-900/50 text-white backdrop-blur-xs transition-colors hover:bg-zinc-900/70">
                       <SelectValue
                         placeholder={
                           <div className="flex items-center gap-2">
@@ -95,7 +95,7 @@ export default function DownloadAurora({
             {/* Installation Guide - More Friendly */}
             <div className="space-y-4 rounded-2xl border border-aurora-blue/20 bg-aurora-blue/5 p-6">
               <div className="flex items-center gap-3">
-                <Info className="h-5 w-5 flex-shrink-0 text-aurora-blue" />
+                <Info className="h-5 w-5 shrink-0 text-aurora-blue" />
                 <h4 className="text-lg font-semibold text-aurora-blue">
                   {t("installation-guide")}
                 </h4>
@@ -127,7 +127,7 @@ export default function DownloadAurora({
             {primaryGPU ? (
               <div className="space-y-6 border-t border-zinc-700/50 pt-8">
                 <div className="text-center">
-                  <h3 className="bg-gradient-to-r from-aurora-darkblue to-aurora-purple bg-clip-text text-2xl font-bold text-transparent lg:text-3xl">
+                  <h3 className="bg-linear-to-r from-aurora-darkblue to-aurora-purple bg-clip-text text-2xl font-bold text-transparent lg:text-3xl">
                     {t("ready-to-download")}
                   </h3>
                   <p className="mt-2 text-lg text-zinc-300">
@@ -214,9 +214,9 @@ function DownloadButtons({
     <div className="grid gap-4 lg:grid-cols-2">
       <a
         href={downloadLink}
-        className="group flex items-center justify-center gap-4 rounded-2xl border border-aurora-darkblue/50 bg-gradient-to-r from-aurora-darkblue to-aurora-purple p-8 text-white shadow-lg transition-all duration-200 hover:scale-[1.02] hover:shadow-2xl hover:shadow-aurora-darkblue/30"
+        className="group flex items-center justify-center gap-4 rounded-2xl border border-aurora-darkblue/50 bg-linear-to-r from-aurora-darkblue to-aurora-purple p-8 text-white shadow-lg transition-all duration-200 hover:scale-[1.02] hover:shadow-2xl hover:shadow-aurora-darkblue/30"
       >
-        <CloudDownload className="h-8 w-8 flex-shrink-0 transition-transform group-hover:scale-110" />
+        <CloudDownload className="h-8 w-8 shrink-0 transition-transform group-hover:scale-110" />
         <div className="text-center">
           <div className="text-xl font-bold">{t("download-iso")}</div>
           <div className="mt-1 text-sm text-white/80">({imageName})</div>
@@ -227,7 +227,7 @@ function DownloadButtons({
         href={checksumLink}
         className="group flex items-center justify-center gap-4 rounded-2xl border border-zinc-500 bg-zinc-900/40 p-8 text-white shadow-lg transition-all duration-200 hover:scale-[1.02] hover:border-aurora-orangina/50 hover:bg-zinc-900/60 hover:shadow-2xl hover:shadow-aurora-orangina/20"
       >
-        <Package className="h-8 w-8 flex-shrink-0 text-aurora-orangina transition-transform group-hover:scale-110" />
+        <Package className="h-8 w-8 shrink-0 text-aurora-orangina transition-transform group-hover:scale-110" />
         <div className="text-center">
           <div className="text-xl font-bold">{t("checksum")}</div>
           <div className="mt-1 text-sm text-zinc-400">(SHA256)</div>

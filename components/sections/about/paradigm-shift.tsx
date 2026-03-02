@@ -30,12 +30,12 @@ export default function ParadigmShift() {
   return (
     <div
       className={
-        "flex w-full max-w-screen-2xl flex-col items-center justify-start gap-10"
+        "flex w-full max-w-(--breakpoint-2xl) flex-col items-center justify-start gap-10"
       }
     >
       <h1
         className={
-          "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-4xl font-bold text-transparent lg:text-7xl py-2"
+          "bg-linear-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-4xl font-bold text-transparent lg:text-7xl py-2"
         }
       >
         {t("title")}
@@ -45,17 +45,17 @@ export default function ParadigmShift() {
       </p>
       <div className={"grid grid-cols-1 gap-8 lg:grid-cols-1 w-full"}>
         <SpotlightCard
-          className="text-white bg-zinc-950 border-zinc-600 backdrop-blur-sm"
+          className="text-white bg-zinc-950 border-zinc-600 backdrop-blur-xs"
           spotlightColor={`rgba(102, 185, 242, 0.15)`} // aurora-blue
         >
           <div className={"flex flex-row items-start gap-6"}>
-            <div className={"flex-shrink-0"}>
+            <div className={"shrink-0"}>
               <Cuboid size={48} className={"text-aurora-blue"} />
             </div>
             <div className={"flex flex-col gap-4 flex-1"}>
               <h2
                 className={
-                  "bg-gradient-to-r from-aurora-blue to-aurora-darkblue bg-clip-text text-3xl font-semibold text-transparent"
+                  "bg-linear-to-r from-aurora-blue to-aurora-darkblue bg-clip-text text-3xl font-semibold text-transparent"
                 }
               >
                 {t("rock-solid")}
@@ -72,7 +72,7 @@ export default function ParadigmShift() {
                 </p>
                 <p
                   className={
-                    "bg-gradient-to-r from-aurora-blue to-aurora-darkblue bg-clip-text text-2xl font-semibold text-transparent"
+                    "bg-linear-to-r from-aurora-blue to-aurora-darkblue bg-clip-text text-2xl font-semibold text-transparent"
                   }
                 >
                   {t("rock-solid-highlight")}
@@ -83,18 +83,18 @@ export default function ParadigmShift() {
         </SpotlightCard>
 
         <SpotlightCard
-          className="text-white bg-zinc-950 border-zinc-600 backdrop-blur-sm"
+          className="text-white bg-zinc-950 border-zinc-600 backdrop-blur-xs"
           spotlightColor={`rgba(236, 146, 161, 0.15)`} // aurora-lightorange
         >
           <div className={"flex flex-row items-start gap-6"}>
-            <div className={"flex-shrink-0"}>
+            <div className={"shrink-0"}>
               <ShoppingBag className={"text-aurora-lightorange"} size={48} />
             </div>
             <div className={"flex flex-col gap-4 flex-1"}>
               <div className={"flex flex-row items-center justify-between"}>
                 <h2
                   className={
-                    "bg-gradient-to-r from-aurora-lightorange to-aurora-orangina bg-clip-text text-3xl font-semibold text-transparent"
+                    "bg-linear-to-r from-aurora-lightorange to-aurora-orangina bg-clip-text text-3xl font-semibold text-transparent"
                   }
                 >
                   {t("app-store")}
@@ -107,7 +107,7 @@ export default function ParadigmShift() {
                 </p>
                 <p
                   className={
-                    "bg-gradient-to-r from-aurora-lightorange to-aurora-orangina bg-clip-text text-2xl font-semibold text-transparent mb-4"
+                    "bg-linear-to-r from-aurora-lightorange to-aurora-orangina bg-clip-text text-2xl font-semibold text-transparent mb-4"
                   }
                 >
                   {t("app-store-highlight")}
@@ -119,17 +119,17 @@ export default function ParadigmShift() {
         </SpotlightCard>
 
         <SpotlightCard
-          className="text-white bg-zinc-950 border-zinc-600 backdrop-blur-sm"
+          className="text-white bg-zinc-950 border-zinc-600 backdrop-blur-xs"
           spotlightColor={`rgba(59, 28, 111, 0.15)`} // aurora-purple
         >
           <div className={"flex flex-row items-start gap-6"}>
-            <div className={"flex-shrink-0"}>
+            <div className={"shrink-0"}>
               <TextSearch className={"text-aurora-darkblue"} size={48} />
             </div>
             <div className={"flex flex-col gap-4 flex-1"}>
               <h2
                 className={
-                  "bg-gradient-to-r from-aurora-darkblue/80 to-aurora-blue bg-clip-text text-3xl font-semibold text-transparent"
+                  "bg-linear-to-r from-aurora-darkblue/80 to-aurora-blue bg-clip-text text-3xl font-semibold text-transparent"
                 }
               >
                 {t("extendable")}
@@ -140,7 +140,7 @@ export default function ParadigmShift() {
                 </p>
                 <p
                   className={
-                    "bg-gradient-to-r from-aurora-darkblue to-aurora-blue bg-clip-text text-2xl font-semibold text-transparent"
+                    "bg-linear-to-r from-aurora-darkblue to-aurora-blue bg-clip-text text-2xl font-semibold text-transparent"
                   }
                 >
                   {t("extendable-highlight")}

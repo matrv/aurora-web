@@ -1,6 +1,172 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+  @media (width >= --theme(--breakpoint-sm)) {
+    max-width: none;
+  }
+  @media (width >= 1400px) {
+    max-width: 1400px;
+  }
+}
+
+@theme {
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --color-aurora-purple: oklch(0.3229 0.1342 294.79);
+  --color-aurora-blue: oklch(0.756 0.1156 240.62);
+  --color-aurora-darkblue: oklch(0.5305 0.1216 268.19);
+  --color-aurora-lightorange: oklch(0.7565 0.1098 9.22);
+  --color-aurora-orangina: oklch(0.6415 0.1597 5.26);
+  --color-aurora-lightred: oklch(0.556 0.1272 352.77);
+  --color-aurora-pride-red: oklch(0.5777 0.2361 29.14);
+  --color-aurora-pride-orange: oklch(0.7505 0.1791 58.28);
+  --color-aurora-pride-yellow: oklch(0.931 0.196565 103.9667);
+  --color-aurora-pride-green: oklch(0.5219 0.1599 145.9);
+  --color-aurora-pride-blue: oklch(0.5202 0.2679 263.21);
+  --color-aurora-pride-violet: oklch(0.4103 0.1909 320.84);
+  --color-aurora-trans-blue: oklch(0.8025 0.1203 226.51);
+  --color-aurora-trans-pink: oklch(0.8118 0.0912 6.32);
+  --color-aurora-trans-white: oklch(0.9702 0 0);
+  --color-ublue-darkblue: oklch(0.3001 0.0585 274.3);
+  --color-ublue-lightblue: oklch(0.5188 0.234 268.76);
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-meteor: meteor 5s linear infinite;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+  @keyframes meteor {
+    0% {
+      transform: rotate(var(--angle)) translateX(0);
+      opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(var(--angle)) translateX(-500px);
+      opacity: 0;
+    }
+  }
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+  button:not(disabled):hover {
+    cursor: pointer;
+  }
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
+
+@utility bgimg {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url('/aurora_wallpaper.jpg');
+  background-attachment: fixed;
+  backdrop-filter: blur(10px);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+
+@utility bgimg_resilient {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)),
+    url('/resilient.jpg');
+  background-attachment: fixed;
+  backdrop-filter: blur(50px);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+
+@utility bgimg_faq {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+    url('/jonatan-pie-aurora.jpg');
+  width: 100%;
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+@utility serif-font {
+  font-family: 'Poltawski Nowy', serif;
+  font-weight: 700;
+}
 
 @layer base {
     :root {
@@ -63,53 +229,6 @@
         --border: 217.2 32.6% 17.5%;
         --input: 217.2 32.6% 17.5%;
         --ring: 212.7 26.8% 83.9%;
-    }
-}
-
-@layer utilities {
-    .text-balance {
-        text-wrap: balance;
-    }
-
-    .bgimg {
-        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-        url("/aurora_wallpaper.jpg");
-        background-attachment: fixed;
-        backdrop-filter: blur(10px);
-        background-size: cover;
-        background-position: center;
-        position: relative;
-        z-index: 1;
-    }
-
-    .bgimg_resilient {
-        background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)),
-        url("/resilient.jpg");
-        background-attachment: fixed;
-        backdrop-filter: blur(50px);
-        background-size: cover;
-        background-position: center;
-        position: relative;
-        z-index: 1;
-    }
-
-    .bgimg_faq {
-        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
-        url("/jonatan-pie-aurora.jpg");
-        width: 100%;
-        min-height: 100vh;
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center;
-        position: relative;
-        z-index: 1;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .serif-font {
-        font-family: "Poltawski Nowy", serif;
-        font-weight: 700;
     }
 }
 

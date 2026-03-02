@@ -13,7 +13,7 @@ export default function YourNewDesktop() {
     <div className="relative flex flex-col items-center justify-center gap-10">
       <div
         className={
-          "relative aspect-auto h-full w-full max-w-screen-2xl lg:min-w-[750px]"
+          "relative aspect-auto h-full w-full max-w-(--breakpoint-2xl) lg:min-w-[750px]"
         }
       >
         <div className="relative h-full w-full">
@@ -41,11 +41,11 @@ export default function YourNewDesktop() {
         </div>
       </div>
 
-      <div className={"flex w-full max-w-screen-2xl flex-col gap-8"}>
+      <div className={"flex w-full max-w-(--breakpoint-2xl) flex-col gap-8"}>
         <div className="text-center">
           <h1
             className={
-              "bg-gradient-to-br from-aurora-blue to-aurora-orangina bg-clip-text text-4xl font-bold text-transparent lg:text-7xl py-2"
+              "bg-linear-to-br from-aurora-blue to-aurora-orangina bg-clip-text text-4xl font-bold text-transparent lg:text-7xl py-2"
             }
           >
             {t("title")}
@@ -62,12 +62,12 @@ export default function YourNewDesktop() {
           >
             <div className={"flex flex-col gap-6 h-full"}>
               <div className={"flex items-center gap-4"}>
-                <div className={"flex-shrink-0"}>
+                <div className={"shrink-0"}>
                   <KDELogo size={48} />
                 </div>
                 <h2
                   className={
-                    "bg-gradient-to-r from-aurora-darkblue to-ublue-lightblue bg-clip-text text-3xl font-semibold text-transparent"
+                    "bg-linear-to-r from-aurora-darkblue to-ublue-lightblue bg-clip-text text-3xl font-semibold text-transparent"
                   }
                 >
                   {t("kde-title")}
@@ -80,7 +80,7 @@ export default function YourNewDesktop() {
                 </p>
                 <p
                   className={
-                    "bg-gradient-to-r from-aurora-darkblue to-ublue-lightblue bg-clip-text text-2xl font-semibold text-transparent"
+                    "bg-linear-to-r from-aurora-darkblue to-ublue-lightblue bg-clip-text text-2xl font-semibold text-transparent"
                   }
                 >
                   {t("kde-highlight")}
@@ -95,12 +95,12 @@ export default function YourNewDesktop() {
           >
             <div className={"flex flex-col gap-6 h-full"}>
               <div className={"flex items-center gap-4"}>
-                <div className={"flex-shrink-0"}>
+                <div className={"shrink-0"}>
                   <Trees size={48} className={"text-aurora-lightorange"} />
                 </div>
                 <h2
                   className={
-                    "bg-gradient-to-r from-aurora-lightorange to-aurora-orangina bg-clip-text text-3xl font-semibold text-transparent"
+                    "bg-linear-to-r from-aurora-lightorange to-aurora-orangina bg-clip-text text-3xl font-semibold text-transparent"
                   }
                 >
                   {t("defaults-title")}
@@ -113,7 +113,7 @@ export default function YourNewDesktop() {
                 </p>
                 <p
                   className={
-                    "bg-gradient-to-r from-aurora-lightorange to-aurora-orangina bg-clip-text text-2xl font-semibold text-transparent"
+                    "bg-linear-to-r from-aurora-lightorange to-aurora-orangina bg-clip-text text-2xl font-semibold text-transparent"
                   }
                 >
                   {t("defaults-highlight")}

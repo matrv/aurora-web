@@ -10,12 +10,12 @@ export default function AboutDocs() {
   return (
     <div
       className={
-        "flex max-w-screen-2xl flex-col items-center justify-center gap-10 px-4 lg:px-0"
+        "flex max-w-(--breakpoint-2xl) flex-col items-center justify-center gap-10 px-4 lg:px-0"
       }
     >
       <h1
         className={
-          "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-4xl font-bold text-transparent lg:text-7xl py-2"
+          "bg-linear-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-4xl font-bold text-transparent lg:text-7xl py-2"
         }
       >
         {t("title")}
@@ -25,7 +25,7 @@ export default function AboutDocs() {
       </p>
       <div
         className={
-          "grid w-full max-w-screen-2xl grid-cols-1 gap-8 lg:grid-cols-2"
+          "grid w-full max-w-(--breakpoint-2xl) grid-cols-1 gap-8 lg:grid-cols-2"
         }
       >
         <SpotlightCard
@@ -34,10 +34,10 @@ export default function AboutDocs() {
         >
           <div className={"flex flex-col gap-6 h-full"}>
             <div className={"flex items-center gap-4"}>
-              <BookOpen size={48} className={"text-aurora-blue flex-shrink-0"} />
+              <BookOpen size={48} className={"text-aurora-blue shrink-0"} />
               <h2
                 className={
-                  "bg-gradient-to-r from-aurora-blue to-aurora-darkblue bg-clip-text text-3xl font-semibold text-transparent"
+                  "bg-linear-to-r from-aurora-blue to-aurora-darkblue bg-clip-text text-3xl font-semibold text-transparent"
                 }
               >
                 {t("docs-title")}
@@ -50,7 +50,7 @@ export default function AboutDocs() {
               </p>
               <p
                 className={
-                  "bg-gradient-to-r from-aurora-blue to-aurora-darkblue bg-clip-text text-2xl font-semibold text-transparent mb-6"
+                  "bg-linear-to-r from-aurora-blue to-aurora-darkblue bg-clip-text text-2xl font-semibold text-transparent mb-6"
                 }
               >
                 {t("docs-highlight")}
@@ -88,10 +88,10 @@ export default function AboutDocs() {
         >
           <div className={"flex flex-col gap-6 h-full"}>
             <div className={"flex items-center gap-4"}>
-              <Users size={48} className={"text-aurora-orangina flex-shrink-0"} />
+              <Users size={48} className={"text-aurora-orangina shrink-0"} />
               <h2
                 className={
-                  "bg-gradient-to-r from-aurora-orangina to-aurora-lightred bg-clip-text text-3xl font-semibold text-transparent"
+                  "bg-linear-to-r from-aurora-orangina to-aurora-lightred bg-clip-text text-3xl font-semibold text-transparent"
                 }
               >
                 {t("community-title")}
@@ -104,7 +104,7 @@ export default function AboutDocs() {
               </p>
               <p
                 className={
-                  "bg-gradient-to-r from-aurora-orangina to-aurora-lightred bg-clip-text text-2xl font-semibold text-transparent mb-6"
+                  "bg-linear-to-r from-aurora-orangina to-aurora-lightred bg-clip-text text-2xl font-semibold text-transparent mb-6"
                 }
               >
                 {t("community-highlight")}

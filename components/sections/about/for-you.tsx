@@ -10,12 +10,12 @@ export default function ForYou() {
   return (
     <div
       className={
-        "flex w-full max-w-screen-2xl flex-col items-center justify-start gap-10"
+        "flex w-full max-w-(--breakpoint-2xl) flex-col items-center justify-start gap-10"
       }
     >
       <h1
         className={
-          "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-4xl font-bold text-transparent lg:text-7xl py-2"
+          "bg-linear-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-4xl font-bold text-transparent lg:text-7xl py-2"
         }
       >
         {t("title")}
@@ -29,7 +29,7 @@ export default function ForYou() {
           spotlightColor={`rgba(102, 185, 242, 0.2)`} // aurora-blue
         >
           <div className={"flex flex-col items-center gap-6 text-center h-full"}>
-            <div className={"flex-shrink-0"}>
+            <div className={"shrink-0"}>
               <RotateCw
                 size={48}
                 className={
@@ -40,7 +40,7 @@ export default function ForYou() {
             <div className={"flex flex-col gap-4 flex-1"}>
               <h2
                 className={
-                  "bg-gradient-to-r from-aurora-blue to-aurora-darkblue bg-clip-text text-3xl font-semibold text-transparent"
+                  "bg-linear-to-r from-aurora-blue to-aurora-darkblue bg-clip-text text-3xl font-semibold text-transparent"
                 }
               >
                 {t("automatic-updates")}
@@ -51,7 +51,7 @@ export default function ForYou() {
                 </p>
                 <p
                   className={
-                    "bg-gradient-to-r from-aurora-blue to-aurora-darkblue bg-clip-text text-2xl font-semibold text-transparent"
+                    "bg-linear-to-r from-aurora-blue to-aurora-darkblue bg-clip-text text-2xl font-semibold text-transparent"
                   }
                 >
                   {t("automatic-updates-highlight")}
@@ -66,13 +66,13 @@ export default function ForYou() {
           spotlightColor={`rgba(217, 92, 127, 0.2)`} // aurora-orangina
         >
           <div className={"flex flex-col items-center gap-6 text-center h-full"}>
-            <div className={"flex-shrink-0"}>
+            <div className={"shrink-0"}>
               <CpuIcon className={"text-aurora-orangina"} size={48} />
             </div>
             <div className={"flex flex-col gap-4 flex-1"}>
               <h2
                 className={
-                  "bg-gradient-to-r from-aurora-orangina to-aurora-lightred bg-clip-text text-3xl font-semibold text-transparent"
+                  "bg-linear-to-r from-aurora-orangina to-aurora-lightred bg-clip-text text-3xl font-semibold text-transparent"
                 }
               >
                 {t("hardware-support")}
@@ -83,7 +83,7 @@ export default function ForYou() {
                 </p>
                 <p
                   className={
-                    "bg-gradient-to-r from-aurora-orangina to-aurora-lightred bg-clip-text text-2xl font-semibold text-transparent"
+                    "bg-linear-to-r from-aurora-orangina to-aurora-lightred bg-clip-text text-2xl font-semibold text-transparent"
                   }
                 >
                   {t("hardware-support-highlight")}
@@ -98,13 +98,13 @@ export default function ForYou() {
           spotlightColor={`rgba(78, 103, 178, 0.2)`} // aurora-darkblue
         >
           <div className={"flex flex-col items-center gap-6 text-center h-full"}>
-            <div className={"flex-shrink-0"}>
+            <div className={"shrink-0"}>
               <ScrollText  className={"text-aurora-darkblue"} size={48} />
             </div>
             <div className={"flex flex-col gap-4 flex-1"}>
               <h2
                 className={
-                  "bg-gradient-to-r from-aurora-darkblue to-ublue-lightblue bg-clip-text text-3xl font-semibold text-transparent"
+                  "bg-linear-to-r from-aurora-darkblue to-ublue-lightblue bg-clip-text text-3xl font-semibold text-transparent"
                 }
               >
                 {t("helping-you")}
@@ -115,7 +115,7 @@ export default function ForYou() {
                 </p>
                 <p
                   className={
-                    "bg-gradient-to-r from-aurora-darkblue to-ublue-lightblue bg-clip-text text-2xl font-semibold text-transparent"
+                    "bg-linear-to-r from-aurora-darkblue to-ublue-lightblue bg-clip-text text-2xl font-semibold text-transparent"
                   }
                 >
 

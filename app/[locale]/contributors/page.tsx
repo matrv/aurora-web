@@ -115,10 +115,10 @@ export default function ContributorsPage() {
       <StarsBackground starDensity={0.0003} static />
       <SharedNavbar variant="page" />
 
-      <main className="relative z-10 mx-auto max-w-screen-xl px-6 pb-16 pt-32">
+      <main className="relative z-10 mx-auto max-w-(--breakpoint-xl) px-6 pb-16 pt-32">
         {/* Hero Section */}
         <div className="mb-16 text-center">
-          <h1 className="mb-4 bg-gradient-to-r from-aurora-blue via-aurora-darkblue to-aurora-orangina bg-clip-text text-5xl font-bold text-transparent lg:text-7xl">
+          <h1 className="mb-4 bg-linear-to-r from-aurora-blue via-aurora-darkblue to-aurora-orangina bg-clip-text text-5xl font-bold text-transparent lg:text-7xl">
             {t("title")}
           </h1>
           <p className="mx-auto max-w-2xl text-xl text-zinc-400">
@@ -127,9 +127,9 @@ export default function ContributorsPage() {
         </div>
 
         {/* Sponsor CTA */}
-        <div className="mb-16 overflow-hidden rounded-2xl border border-aurora-lightred/20 bg-gradient-to-r from-aurora-lightred/10 to-aurora-lightorange/10 p-8">
+        <div className="mb-16 overflow-hidden rounded-2xl border border-aurora-lightred/20 bg-linear-to-r from-aurora-lightred/10 to-aurora-lightorange/10 p-8">
           <div className="flex flex-col items-center gap-6 text-center lg:flex-row lg:text-left">
-            <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl bg-pink-500/20">
+            <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-pink-500/20">
               <Heart className="h-8 w-8 text-aurora-lightred" />
             </div>
             <div className="flex-1">
@@ -379,7 +379,7 @@ export default function ContributorsPage() {
               href="https://github.com/ublue-os/aurora"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-aurora-blue to-aurora-darkblue px-6 py-3 font-semibold text-white transition-all hover:scale-105"
+              className="flex items-center gap-2 rounded-xl bg-linear-to-r from-aurora-blue to-aurora-darkblue px-6 py-3 font-semibold text-white transition-all hover:scale-105"
             >
               <Github className="h-5 w-5" />
               {t("contribute-github")}

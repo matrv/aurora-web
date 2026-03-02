@@ -10,12 +10,12 @@ export default function ForDevelopers() {
   return (
     <div
       className={
-        "flex w-full max-w-screen-2xl flex-col items-center justify-start gap-10"
+        "flex w-full max-w-(--breakpoint-2xl) flex-col items-center justify-start gap-10"
       }
     >
       <h1
         className={
-          "bg-gradient-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-4xl font-bold text-transparent lg:text-7xl py-2"
+          "bg-linear-to-r from-aurora-blue to-aurora-lightorange bg-clip-text text-4xl font-bold text-transparent lg:text-7xl py-2"
         }
       >
         {t("title")}
@@ -29,13 +29,13 @@ export default function ForDevelopers() {
           spotlightColor={`rgba(59, 28, 111, 0.2)`} // aurora-purple
         >
           <div className={"flex flex-col items-center gap-6 text-center h-full"}>
-            <div className={"flex-shrink-0"}>
+            <div className={"shrink-0"}>
               <BrainCircuit size={48} className={"text-aurora-blue"} />
             </div>
             <div className={"flex flex-col gap-4 flex-1"}>
               <h2
                 className={
-                  "bg-gradient-to-r from-aurora-blue to-aurora-orangina bg-clip-text text-3xl font-semibold text-transparent"
+                  "bg-linear-to-r from-aurora-blue to-aurora-orangina bg-clip-text text-3xl font-semibold text-transparent"
                 }
               >
                 {t("local-ai")}
@@ -46,7 +46,7 @@ export default function ForDevelopers() {
                 </p>
                 <p
                   className={
-                    "bg-gradient-to-r from-aurora-blue to-aurora-orangina bg-clip-text text-2xl font-semibold text-transparent"
+                    "bg-linear-to-r from-aurora-blue to-aurora-orangina bg-clip-text text-2xl font-semibold text-transparent"
                   }
                 >
                   {t("local-ai-highlight")}
@@ -61,13 +61,13 @@ export default function ForDevelopers() {
           spotlightColor={`rgba(236, 146, 161, 0.2)`} // aurora-lightorange
         >
           <div className={"flex flex-col items-center gap-6 text-center h-full"}>
-            <div className={"flex-shrink-0"}>
+            <div className={"shrink-0"}>
               <ContainerIcon className={"text-aurora-lightorange"} size={48} />
             </div>
             <div className={"flex flex-col gap-4 flex-1"}>
               <h2
                 className={
-                  "bg-gradient-to-r from-aurora-lightorange to-aurora-orangina bg-clip-text text-3xl font-semibold text-transparent"
+                  "bg-linear-to-r from-aurora-lightorange to-aurora-orangina bg-clip-text text-3xl font-semibold text-transparent"
                 }
               >
                 {t("containers")}
@@ -78,7 +78,7 @@ export default function ForDevelopers() {
                 </p>
                 <p
                   className={
-                    "bg-gradient-to-r from-aurora-lightorange to-aurora-orangina bg-clip-text text-2xl font-semibold text-transparent"
+                    "bg-linear-to-r from-aurora-lightorange to-aurora-orangina bg-clip-text text-2xl font-semibold text-transparent"
                   }
                 >
                   {t("containers-highlight")}
@@ -93,13 +93,13 @@ export default function ForDevelopers() {
           spotlightColor={`rgba(52, 75, 235, 0.2)`} // ublue-lightblue
         >
           <div className={"flex flex-col items-center gap-6 text-center h-full"}>
-            <div className={"flex-shrink-0"}>
+            <div className={"shrink-0"}>
               <CodeIcon className={"text-ublue-lightblue"} size={48} />
             </div>
             <div className={"flex flex-col gap-4 flex-1"}>
               <h2
                 className={
-                  "bg-gradient-to-r from-ublue-lightblue to-aurora-blue bg-clip-text text-3xl font-semibold text-transparent"
+                  "bg-linear-to-r from-ublue-lightblue to-aurora-blue bg-clip-text text-3xl font-semibold text-transparent"
                 }
               >
                 {t("dev-tools")}
@@ -110,7 +110,7 @@ export default function ForDevelopers() {
                 </p>
                 <p
                   className={
-                    "bg-gradient-to-r from-ublue-lightblue to-aurora-blue bg-clip-text text-2xl font-semibold text-transparent"
+                    "bg-linear-to-r from-ublue-lightblue to-aurora-blue bg-clip-text text-2xl font-semibold text-transparent"
                   }
                 >
                   {t("dev-tools-highlight")}
@@ -125,7 +125,7 @@ export default function ForDevelopers() {
           spotlightColor={`rgba(170, 80, 122, 0.2)`} // aurora-lightred
         >
           <div className={"flex flex-col items-center gap-6 text-center h-full"}>
-            <div className={"flex-shrink-0"}>
+            <div className={"shrink-0"}>
               <img
                 alt={"Homebrew Icon"}
                 src={"/icons/brew.svg"}
@@ -138,7 +138,7 @@ export default function ForDevelopers() {
             <div className={"flex flex-col gap-4 flex-1"}>
               <h2
                 className={
-                  "bg-gradient-to-r from-aurora-lightred to-aurora-orangina bg-clip-text text-3xl font-semibold text-transparent"
+                  "bg-linear-to-r from-aurora-lightred to-aurora-orangina bg-clip-text text-3xl font-semibold text-transparent"
                 }
               >
                 {t("homebrew")}
@@ -149,7 +149,7 @@ export default function ForDevelopers() {
                 </p>
                 <p
                   className={
-                    "bg-gradient-to-r from-aurora-lightred to-aurora-orangina bg-clip-text text-2xl font-semibold text-transparent"
+                    "bg-linear-to-r from-aurora-lightred to-aurora-orangina bg-clip-text text-2xl font-semibold text-transparent"
                   }
                 >
                   {t("homebrew-highlight")}
